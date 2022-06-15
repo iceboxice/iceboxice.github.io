@@ -1,5 +1,6 @@
-Here you can say lots of fun things about your site.
+About  
+=====  
 
-Maybe say a some things about yourself.
+Thank you for visiting my GitHub blog, <em>Welcome to the Wonderful World of Widgets</em>!  
 
-Or maybe what you plan to blog about.
+This blog was born at the behest of my principal investigator, Dr. Yongmei Wang. It contains a collection of posts that crafts my computational skills with my musings.
