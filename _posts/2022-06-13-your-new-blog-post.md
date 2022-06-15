@@ -1,0 +1,140 @@
+Thank you for visiting my GitHub blog, <em>Welcome to the Wonderful World of Widgets</em>!  
+
+This blog was born at the behest of my principal investigator, Dr. Yongmei Wang. It contains a collection of posts that crafts my computational skills with my musings.
+
+This is my first blog post.
+
+
+Welcome to the wonderful world of widgets.  
+==========================================
+
+Today's widget is a pong game.
+<img src ="./img/Pong.png">  
+
+```python
+#https://www.youtube.com/watch?v=C6jJg9Zan7w
+import turtle
+#import os
+#for windows, import winsound
+
+PlayerOne_score = 0
+PlayerTwo_score = 0
+
+# create window and declare variable "window" and call the Screen()
+window = turtle.Screen()
+window.title("Pong Turtle Module Game")
+window.bgcolor("midnightblue")
+window.setup(width=800, height=600)
+window.tracer(0)
+
+# create left paddle, "turtle" for module, "Turtle" for class name
+leftpaddle=turtle.Turtle()
+leftpaddle.speed(0)
+leftpaddle.shape("square")
+leftpaddle.color("white")
+leftpaddle.shapesize(stretch_wid=5, stretch_len=1)
+leftpaddle.penup()
+leftpaddle.goto(-350, 0)
+
+# create right paddle
+rightpaddle=turtle.Turtle()
+rightpaddle.speed(0)
+rightpaddle.shape("square")
+rightpaddle.color("white")
+rightpaddle.shapesize(stretch_wid=5, stretch_len=1)
+rightpaddle.penup()
+rightpaddle.goto(350, 0)
+
+# create ball
+ball=turtle.Turtle()
+ball.speed(0)
+ball.shape("circle")
+ball.color("lime")
+ball.shapesize(stretch_wid=2, stretch_len=2)
+ball.penup()
+ball.goto(0, 0)
+ball.dx = 2
+ball.dy = 2
+
+#create score update
+score=turtle.Turtle()
+score.speed(0)
+score.color("white")
+score.penup()
+score.hideturtle()
+score.goto(0,260)
+score.write("Player One: 0                      Player Two: 0", align="center",font=("Arial",24,"normal"))
+
+# left paddle movt
+def leftpaddle_down():
+    y = leftpaddle.ycor()
+    y -= 50
+    leftpaddle.sety(y)
+
+def leftpaddle_up():
+    y = leftpaddle.ycor()
+    y += 50
+    leftpaddle.sety(y)
+
+# right paddle movt
+def rightpaddle_down():
+    y = rightpaddle.ycor()
+    y -= 50
+    rightpaddle.sety(y)
+
+def rightpaddle_up():
+    y = rightpaddle.ycor()
+    y += 50
+    rightpaddle.sety(y)
+
+# keyboard binding
+window.listen()
+window.onkeypress(leftpaddle_down, "s")
+window.onkeypress(leftpaddle_up, "w")
+window.onkeypress(rightpaddle_down, "Down")
+window.onkeypress(rightpaddle_up, "Up")
+
+# main game loop
+while True:
+    window.update()
+
+    #ball movt
+    ball.setx(ball.xcor() + ball.dx)
+    ball.sety(ball.ycor() + ball.dy)
+
+    #border set up
+    if ball.ycor() > 290:
+        ball.sety(290)
+        ball.dy *= -1
+    if ball.ycor() < -290:
+        ball.sety(-290)
+        ball.dy *= -1
+
+    if ball.xcor() > 390:
+        ball.goto(0,0)
+        ball.dx *= -1
+        PlayerOne_score += 1
+        score.clear()
+        score.write("Player One: {}                            Player Two: {}".format(PlayerOne_score, PlayerTwo_score), align="center", font=("Arial", 24, "normal"))
+        #os.system("afplay wallhit.wav&")
+    if ball.xcor() < -390:
+        ball.goto(0,0)
+        ball.dx *= -1
+        PlayerTwo_score += 1
+        score.clear()
+        score.write("Player One: {}                            Player Two: {}".format(PlayerOne_score, PlayerTwo_score), align="center", font=("Arial", 24, "normal"))
+        # os.system("afplay wallhit.wav&")
+#linux is "aplay"; windows is "winsound.Playsound("bounce.wav", winsound.SND_SYNC)
+    #collison
+    if ball.xcor() > 340 and (ball.ycor() < 350) and (ball.ycor()  < rightpaddle.ycor() + 40 and ball.ycor() > rightpaddle.ycor() - 40):
+        ball.setx(340)
+        ball.dx *= -1
+    if ball.xcor() < -340 and (ball.xcor() > -350) and (ball.ycor()  < leftpaddle.ycor() + 40 and ball.ycor() > leftpaddle.ycor() - 40):
+        ball.setx(-340)
+        ball.dx *= -1
+```
+ 
+<ins>References</ins>  
+<https://www.markdownguide.org/basic-syntax/>  
+<https://www.freecodecamp.org/news/how-to-format-code-in-markdown/>  
+:shaved_ice:[Emoji List](https://gist.github.com/rxaviers/7360908).
