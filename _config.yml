@@ -19,7 +19,7 @@ github_username: "iceboxice"
 #########################################################################################
 ######### Nothing below needs to be changed (unless you know what you're doing) #########
 #########################################################################################
-theme: "hacker"
+theme: "minima"
 
 rss: rss
 
