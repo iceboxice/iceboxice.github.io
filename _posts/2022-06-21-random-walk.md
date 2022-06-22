@@ -6,7 +6,6 @@ Welcome to the wonderful world of widgets.
 Today's widget is a random walk.
 
 ![random walk](https://raw.githubusercontent.com/iceboxice/iceboxice.github.io/main/_posts/img/random_walk.gif)  
-<img src="https://raw.githubusercontent.com/iceboxice/iceboxice.github.io/main/_posts/img/random_walk.gif" width="40" height="40" />  
 
 ```python
 # https://www.youtube.com/watch?v=BfS2H1y6tzQ
