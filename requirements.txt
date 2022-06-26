@@ -2,4 +2,3 @@ ipywidgets==7.7.1
 seaborn==0.11.2
 matplotlib==3.5.2
 seaborn==0.11.2
-IPython==8.4.0
