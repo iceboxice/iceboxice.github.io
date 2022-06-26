@@ -14,4 +14,4 @@ STEPS
 4. KDE w/ integer slider (or float slider) plot  
 5. adjust bandwidth slider to determine answer  
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/iceboxice/iceboxice.github.io/main?urlpath=https%3A%2F%2Fgithub.com%2Ficeboxice%2Ficeboxice.github.io%2Fblob%2Fmain%2F_posts%2Fbinder2022-06-25-KDE-geyser.ipynb)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/iceboxice/iceboxice.github.io/61205e21c044cf5b2159203611065e5f1bcfe33e)
