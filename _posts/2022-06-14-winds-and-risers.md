@@ -12,4 +12,4 @@ Wind | And Still I Rise
 
 <ins>Reference</ins>  
 <https://video-to-markdown.marcomontalbano.com/>  
-:potato:
+🥔
