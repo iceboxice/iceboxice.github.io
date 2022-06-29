@@ -31,8 +31,7 @@ Example Output
 
 
 # STEP 5 example  
-[![Binder](https://mybinder.org/badge_logo.svg)](https://hub.gke2.mybinder.org/user/iceboxice-binder-8s14mhwl/lab/tree/KDE-geyser.ipynb)  
-
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/iceboxice/binder/main)
 
 <ins>Reference</ins>  
 <https://stackoverflow.com/questions/40428931/package-for-listing-version-of-packages-used-in-a-jupyter-notebook>
